@@ -2,19 +2,19 @@ import random
 
 def game(comp,you):
     if(comp == you):
-        return 'Draw'
+        return '    ## Match Draw ##'
     elif(comp == 's' and you == 'w'):
-        return 'lost'
+        return '    !! You lost the Match !!'
     elif(comp == 's' and you == 'g'):
-        return 'win'
+        return '    << You win the Match >>'
     elif(comp == 'g' and you == 'w'):
-        return 'win'
+        return '    << You win the Match >>'
     elif(comp == 'g' and you == 's'):
-        return 'lost'
+        return '    !! You lost the Match !!'
     elif(comp == 'w' and you == 's'):
-        return 'win'
+        return '    << You win the Match >>'
     elif(comp == 'w' and you == 'g'):
-        return 'lost'
+        return '    !! You lost the Match !!'
 
 print("Computer Choice :> Snake(s)    Water(w)    Gun(g)")
 ranChoice = random.randint(1, 3)
@@ -29,3 +29,4 @@ you = input("Your Choice :> Snake(s)    Water(w)    Gun(g)")
 result = game(comp, you)
 print("Computer Choice :>" +str(comp))
 print("User Choice :>" +str(you))
+print(result)
