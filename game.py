@@ -16,7 +16,7 @@ def game(comp,you):
     elif(comp == 'w' and you == 'g'):
         return '    !! You lost the Match !!'
 
-print("Computer Choice :> Snake(s)    Water(w)    Gun(g)")
+computer = ("Computer Choice :> Snake(s)    Water(w)    Gun(g)")
 ranChoice = random.randint(1, 3)
 if (ranChoice == 1):
     comp = 's'
@@ -24,9 +24,9 @@ elif (ranChoice == 2):
     comp = 'w'
 elif (ranChoice == 3):
     comp = 'g' 
-you = input("Your Choice :> Snake(s)    Water(w)    Gun(g)")
+user = input("Your Choice :> Snake(s)    Water(w)    Gun(g)\n")
 
-result = game(comp, you)
-print("Computer Choice :>" +str(comp))
-print("User Choice :>" +str(you))
+result = game(comp, user)
+print("Computer Choice :> \t" +(comp))
+print("User Choice :> \t" +(user))
 print(result)
